@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+  "name": "Night sWitch",
+  "version": "1.0",
+  "description": "Automatically switch new tab wallpaper depending on time",
+  "author": "Ken Wu",
+  "chrome_url_overrides" : {
+    "newtab": "index.html"
+  },
+  "permissions": [
+    "storage"
+  ],
+  "options_page": "options.html",
+  "icons": {
+    "200": "icon200.png"
+  }
+}
