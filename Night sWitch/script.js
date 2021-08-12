@@ -30,11 +30,14 @@ function checkState() {
             var nightMin = parseInt(darkTime.slice(3,5));
             var lightHour = parseInt(lightTime.slice(0,2));
             var lightMin = parseInt(lightTime.slice(3,5));
-            if ((hour > nightHour) || (hour = nightHour && min > nightMin)){
-                changeToDark();
+            if (hour = lightHour && min >= lightMin){
+                changeToLight();
             }
-            else if (hour < lightHour || (hour = lightHour && min < lightMin)){
-                changeToDark();
+            else if(hour > lightHour && hour < nightHour){
+                changeToLight();
+            }
+            else if (hour = nightHour && min < nightMin){
+                changeToLight();
             }
             else {
                 changeToLight();
